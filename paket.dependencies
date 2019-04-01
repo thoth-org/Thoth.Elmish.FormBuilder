@@ -1,0 +1,10 @@
+source https://www.nuget.org/api/v2
+storage: none
+
+nuget FSharp.Core redirects:force, content:none
+nuget Fable.Core prerelease
+nuget Fable.Elmish prerelease
+nuget Fable.React prerelease
+nuget Thoth.Json prerelease
+nuget Thoth.Elmish.Debouncer prerelease
+nuget Fable.Browser.Dom prerelease
