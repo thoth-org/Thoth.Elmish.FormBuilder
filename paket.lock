@@ -1,33 +1,34 @@
 STORAGE: NONE
 NUGET
   remote: https://www.nuget.org/api/v2
-    Fable.Browser.Blob (1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Core (>= 2.1.0-alpha-002) - restriction: >= netstandard2.0
+    Fable.Browser.Blob (1.0) - restriction: >= netstandard2.0
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.Browser.Dom (1.0.0-alpha-004)
-      Fable.Browser.Blob (>= 1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Browser.Event (>= 1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Browser.WebStorage (>= 1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Core (>= 2.1.0-alpha-002) - restriction: >= netstandard2.0
+    Fable.Browser.Dom (1.0)
+      Fable.Browser.Blob (>= 1.0) - restriction: >= netstandard2.0
+      Fable.Browser.Event (>= 1.0) - restriction: >= netstandard2.0
+      Fable.Browser.WebStorage (>= 1.0) - restriction: >= netstandard2.0
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.Browser.Event (1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Core (>= 2.1.0-alpha-002) - restriction: >= netstandard2.0
+    Fable.Browser.Event (1.0) - restriction: >= netstandard2.0
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.Browser.WebStorage (1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Browser.Event (>= 1.0.0-alpha-001) - restriction: >= netstandard2.0
-      Fable.Core (>= 2.1.0-alpha-002) - restriction: >= netstandard2.0
+    Fable.Browser.WebStorage (1.0) - restriction: >= netstandard2.0
+      Fable.Browser.Event (>= 1.0) - restriction: >= netstandard2.0
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.Core (3.0.0-beta-005)
+    Fable.Core (3.0)
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.Elmish (3.0.0-beta-7)
-      Fable.Core (>= 3.0.0-beta-004) - restriction: >= netstandard2.0
+    Fable.Elmish (3.0)
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.6.2) - restriction: >= netstandard2.0
-    Fable.Promise (2.0.0-beta-001) - restriction: >= netstandard2.0
-      Fable.Core (>= 3.0.0-beta-002) - restriction: >= netstandard2.0
+    Fable.Promise (2.0)
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
-    Fable.React (5.0.0-beta-002)
-      Fable.Browser.Dom (>= 1.0.0-alpha-004) - restriction: >= netstandard2.0
-      FSharp.Core (>= 4.5.2) - restriction: >= netstandard2.0
+    Fable.React (5.1)
+      Fable.Browser.Dom (>= 1.0) - restriction: >= netstandard2.0
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
+      FSharp.Core (>= 4.6.2) - restriction: >= netstandard2.0
     FSharp.Core (4.6.2) - content: none, redirects: force
       System.Collections (>= 4.0.11) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
       System.Console (>= 4.0) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
@@ -457,12 +458,6 @@ NUGET
       Microsoft.NETCore.Platforms (>= 1.1) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.2) (< win81) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (< portable-net451+win81+wpa81)
       Microsoft.NETCore.Targets (>= 1.1) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.2) (< win81) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (< portable-net451+win81+wpa81)
       System.Runtime (>= 4.3) - restriction: || (&& (< monoandroid) (< monotouch) (< net451) (>= netstandard1.2) (< win81) (< wpa81) (< xamarinios) (< xamarinmac) (< xamarintvos) (< xamarinwatchos)) (< portable-net451+win81+wpa81)
-    Thoth.Elmish.Debouncer (1.0.0-beta-001)
-      Fable.Core (>= 3.0.0-beta-005) - restriction: >= netstandard2.0
-      Fable.Elmish (>= 3.0.0-beta-7) - restriction: >= netstandard2.0
-      Fable.Promise (>= 2.0.0-beta-001) - restriction: >= netstandard2.0
-      Fable.React (>= 5.0.0-beta-002) - restriction: >= netstandard2.0
-      FSharp.Core (>= 4.6.2) - restriction: >= netstandard2.0
-    Thoth.Json (3.0.0-beta-003)
-      Fable.Core (>= 3.0.0-beta-004) - restriction: >= netstandard2.0
+    Thoth.Json (3.0)
+      Fable.Core (>= 3.0) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.6.2) - restriction: >= netstandard2.0

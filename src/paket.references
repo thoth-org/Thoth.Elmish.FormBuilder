@@ -3,5 +3,5 @@ Fable.Core
 Fable.Elmish
 Fable.React
 Thoth.Json
-Thoth.Elmish.Debouncer
 Fable.Browser.Dom
+Fable.Promise
