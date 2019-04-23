@@ -60,16 +60,16 @@ module Form =
     module private Styles =
 
         let inline form<'a> =
-            [ Position Position.Relative ]
+            [ Position PositionOptions.Relative ]
             |> Style
 
         let inline loaderContainer<'a> =
-            [ Display Display.Flex
-              Position Position.Absolute
+            [ Display DisplayOptions.Flex
+              Position PositionOptions.Absolute
               JustifyContent "center"
               Width "100%"
               Height "100%"
-              AlignItems AlignItems.Center
+              AlignItems AlignItemsOptions.Center
               ZIndex 10
               Opacity 0.4
               BackgroundColor "white" ]
@@ -79,7 +79,7 @@ module Form =
         // https://loading.io/css/
         let inline loaderRings<'a> =
             [ Content " "
-              Display Display.Block
+              Display DisplayOptions.Block
               Width "46px"
               Height "46px"
               Margin "1px"
