@@ -1,0 +1,12 @@
+group Demo
+    FSharp.Core
+    Fable.Core
+    Fable.Elmish
+    Fable.Elmish.React
+    Fable.Elmish.Browser
+    Fable.React
+    Fulma
+    Fable.Browser.Dom
+    Thoth.Elmish.Debouncer
+    Fable.Promise
+    Thoth.Json

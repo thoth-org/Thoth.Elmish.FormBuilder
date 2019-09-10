@@ -1,0 +1,3 @@
+[submodule "libraries/Thoth.Elmish.FormBuilder.BasicFields"]
+	path = libraries/Thoth.Elmish.FormBuilder.BasicFields
+	url = git@github.com:thoth-org/Thoth.Elmish.FormBuilder.BasicFields.git

@@ -43,3 +43,6 @@ yarn-error\.log
 
 .fable
 dist/
+docs_deploy/
+.ionide/
+demo/output/
