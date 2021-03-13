@@ -220,6 +220,25 @@ Example:
 )
 ```
 
+### Form with Custom view
+Especially when working with [custom field views](basicfields---custom-views), it may be beneficial, to also use a custom container element. 
+
+By default, the render function places all fields in a `div` element. When using `BuildWithCustomView` instead of `Build()` during form creation, a custom view function can be provided. This allows using any other fitting function (like `form`) or using a custom function that may return a `div` element with custom css-classes or even customize the contents.
+
+Example:
+```fsharp
+let formView attributes children = div attributes (children |> Seq.rev)
+
+let (formState, formConfig) =
+    Form<Msg>
+        .Create(OnFormMsg)
+        .AddField(xy..)
+        // instead of using `.Build()`, we provide our own view function:
+        .BuildWithCustomView formView
+```
+
+When combined with [custom fields](create-a-custom-field), this allows complex form layouts. But be carefull, with the given parameters - the actual attributes and children are considered an implementation detail that may change without notice (like the nesting of child elements for example).
+
 ### Server side validation
 
 In order to support server side validation, the library defines the type `ErrorDef`.
