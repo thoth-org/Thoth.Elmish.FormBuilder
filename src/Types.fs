@@ -2,6 +2,7 @@ namespace Thoth.Elmish.FormBuilder
 
 open Thoth.Json
 open Fable.React
+open Fable.React.Props
 open Elmish
 
 module Types =
@@ -83,7 +84,8 @@ module Types =
     /// Configuration for the Form
     type Config<'AppMsg> =
         { ToMsg : Msg -> 'AppMsg
-          FieldsConfig : Map<FieldType, FieldConfig> }
+          FieldsConfig : Map<FieldType, FieldConfig>
+          View: (IHTMLProp seq -> ReactElement seq -> ReactElement) }
 
     type FieldBuilder =
         { Type : FieldType

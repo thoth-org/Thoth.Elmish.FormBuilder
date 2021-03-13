@@ -17,8 +17,8 @@ type Form<'AppMsg> private (onFormMsg : Msg -> 'AppMsg, fieldBuilders : Types.Fi
 
     member __.AddFields(newFieldBuilders : FieldBuilder list) =
         Form (onFormMsg, fieldBuilders @ newFieldBuilders)
-
-    member __.Build() =
+        
+    member __.BuildWithCustomView view =
         let duplicatesName =
             fieldBuilders
             |> List.groupBy (fun builder -> builder.Name)
@@ -41,6 +41,7 @@ type Form<'AppMsg> private (onFormMsg : Msg -> 'AppMsg, fieldBuilders : Types.Fi
                     builder.Type, builder.Config
                 )
                 |> Map.ofList
+              View = view
             }
 
         let fields : Types.Field list =
@@ -53,6 +54,8 @@ type Form<'AppMsg> private (onFormMsg : Msg -> 'AppMsg, fieldBuilders : Types.Fi
 
         { Fields = fields
           IsLoading = false }, config
+
+    member __.Build() = __.BuildWithCustomView div
 
 [<RequireQualifiedAccess>]
 module Form =
@@ -174,7 +177,7 @@ module Form =
                     [ ] ]
         else
             nothing
-
+    
     /// Render the form in your view
     /// Props description:
     /// - `Config` - `Config` - Configuration of your form. You get it when calling `From.init`
@@ -202,13 +205,12 @@ module Form =
                 defaultLoader props.State.IsLoading
             | CustomLoader loader ->
                 loader props.State.IsLoading
-
-        div [ Class "thoth-form"
-              Styles.form ]
-            [ loader
-              fields
-              props.ActionsArea ]
-
+                
+        props.Config.View
+            ([ Class "thoth-form"; Styles.form ] |> Seq.map (fun a -> a :> IHTMLProp))
+            ([ loader; fields; props.ActionsArea ] :> ReactElement seq)
+            
+                                      
     /// Validate the model and check if it's valid
     /// Returns a tuple of 2 elements
     /// - First element is the new state of the form to store in your model
