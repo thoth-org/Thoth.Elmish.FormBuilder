@@ -2,7 +2,7 @@
     "private": true,
     "devDependencies": {
         "bulma-tooltip": "^2.0.2",
-        "gh-pages": "^2.1.1",
+        "gh-pages": "^5.0.0",
         "nacara": "^0.2.1",
         "react": "^16.9.0",
         "react-dom": "^16.9.0"
